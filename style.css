@@ -1,0 +1,1087 @@
+/* Example 26-13: styles.css */
+
+* {
+  font-family:'Lato',sans-serif;
+  font-weight:300;
+  font-size  :16px;
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+
+*::selection {
+  background: #D5C8E6; /* WebKit/Blink Browsers */
+  text-shadow: none;
+}
+*::-moz-selection {
+  background: #D5C8E6; /* Gecko Browsers */
+  text-shadow: none;
+}
+
+*:focus {
+    outline: 0;
+}
+
+html,body {
+	height: 100%;
+  width: 100%;
+  background: rgb(241,242,242);
+  color: #383838;
+}
+
+a
+{
+	color: #383838;
+  text-decoration: none;	
+}
+
+a: visited{
+	color: #383838;
+}
+
+	/*	================================================================
+			Home Page
+			================================================================ */
+
+.pic-container{
+	position: absolute;
+	margin-top: -5px;
+	margin-left: 10px;
+  width: 200px;
+  height: 170px;	
+  overflow: hidden;
+}
+
+.pic-container img
+{
+  width: 100%;	
+}
+
+.pic-container a{
+  display: none;	
+}
+
+.pic-container:hover img
+{
+	display: none;
+	z-index: -1;
+}
+
+.pic-container:hover a
+{
+	display: block;
+  height: 170px;
+}
+
+#right-border{
+	position: absolute; 
+	z-index: -1;
+	top: 31px;
+	height: 92%;
+	width: 200px;
+  border-right: thin double #DEDEDE;
+}
+
+#sidebar{ 
+	position: absolute;
+	height: 100%;
+  width: 200px; 
+  margin-left: 55px; 
+  z-index: 20;
+ 
+}
+
+#comments-likes{
+	float: right;
+	width: 90px;
+  margin-top: 155px;	
+}
+
+#comment-section
+{
+	float:  left;
+  margin-right: 15px;	
+}
+
+#comment-count
+{	
+ float: left;	
+ color: #878787;
+}
+
+#comment-pic
+{
+  float: left;
+  margin-top: 18px;
+  margin-right: 5px;
+  opacity: .6;
+}
+
+#likes{
+  float: left;	
+  color: #878787;
+}
+
+#like-button{
+	float: left;	
+	background-image: url('heart.png');
+	background-size: 15px;
+	background-repeat: no-repeat;
+  background-color: white;
+  opacity: .6;
+  border: 0px;
+  width: 15px;
+  height: 15px;
+  margin-top: 19px;
+  margin-right: 5px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+#post{
+	float:left; 
+	width: 225px; 
+	height: 225px; 
+	margin-top: 50px; 
+	margin-left: 30px; 
+	padding: 0px 10px 3px 10px; 
+	background: #FFFFFF; 
+	border-radius: 7px;
+	box-shadow: 0 1px 3px rgba(0,0,0,.05);
+}
+
+.show
+{
+  display: none;	
+}
+
+.show-delete{
+  display: none;	
+}
+
+#post:hover .hide{
+  display: none;	
+}
+
+#post:hover .show{
+  display: block;
+  background: #dddddd;
+  margin-top: -10px;
+  width: 45px;
+  border-radius: 10px;
+  color: white;
+  border: 0px;
+  padding: 15px;	
+  margin-left: 65px;
+  text-align: center;
+  text-decoration: none;
+}
+
+#post:hover .show-delete{
+  display: block;
+  background: red;
+  margin-top: 20px;
+  border-radius: 10px;
+  color: white;
+  border: 0px;
+  padding: 15px;	
+  margin-left: 65px;
+}
+
+#title{
+  width:80%; 
+  color: #7A7A7A;
+  background:rgb(230,231,232); 
+  text-align: center; 
+  margin-top:-15px; 
+  margin-left: -20px;
+  padding: 5px;	
+  
+}
+
+#classes{
+	margin-top: 125px;
+  margin-bottom: 35px;	
+}
+
+#post-button{
+	position: absolute;
+	cursor: pointer;
+  text-decoration: none;
+  margin-top: 30px;
+  padding: 15px;
+  background-color: rgba(71,11,65,.8);
+  color: white;
+  border-radius: 5px;
+  -webkit-transition: none;
+  -moz-transition: none;
+  transiton: none;
+  box-shadow: 0 6px #470b41;
+}
+
+#post-button:hover{
+	margin-top: 32px;
+  box-shadow: 0 4px #470b41;	
+  
+}
+
+#post-button:active{
+	margin-top: 36px;
+	box-shadow: 0 0px #470b41;	
+}
+
+.add-button{
+	position: absolute;
+	cursor: pointer;
+	text-align: center;
+	width: 125px;
+  text-decoration: none;
+  margin-top: 30px;
+  padding: 9px;
+  background-color: rgba(71,11,65,.8);
+  color: white;
+  border-radius: 5px;
+  -webkit-transition: none;
+  -moz-transition: none;
+  transiton: none;
+  box-shadow: 0 6px #470b41;
+}
+
+.add-button:hover{
+	margin-top: 32px;
+  box-shadow: 0 4px #470b41;	
+  
+}
+
+.add-button:active{
+	margin-top: 36px;
+	box-shadow: 0 0px #470b41;	
+}
+
+.small-title{
+  font-size: 15px;	
+}
+
+.list-1{
+  margin-bottom: 20px;	
+}
+
+.list-2{
+  margin-bottom: -5px;	
+}
+
+#list-2 a{
+  text-decoration: none;		
+  color: #383838
+}
+
+#list-2 a:visited{
+  color: #383838		
+}
+
+	/*	================================================================
+			Navigation Bar
+			================================================================ */
+
+li a {
+  text-decoration:none;
+  color: #FFFFFF;
+}
+
+li a:hover {
+  color:#F2EDF7;
+}
+ 
+.menu li {
+  text-align: right;
+  display: inline;
+  padding: 12.5px 20px;
+  color: white;
+  margin: 10px;
+  margin-left: 25px;
+  border-radius: 20px;
+}
+
+#right{
+  text-align: right;
+  padding-right: 2.5%;
+}
+
+#nav{
+  width: 100%;
+  height: 40px;
+  background: #470b41;
+  padding-bottom: 5px;
+  padding-top: 10px;
+}
+
+#logo {
+	margin-top: 7px;
+  width: 100px;
+  margin-left: 55px;
+}
+
+
+#arrow{
+	position: absolute;
+	margin-left: 70px;
+	margin-top:-13px;
+	width: 0;
+	height: 0;
+	border-left: 7px solid transparent;
+	border-right: 7px solid transparent;
+	border-top: 7px solid #470b41;
+}
+
+#heart
+{
+	float: right;
+  width: 15px;	
+  margin-right: 55px;
+  margin-left: 15px;
+	margin-top: -7px;
+}
+
+#paint
+{
+	float: right;
+	width: 15px;
+	margin-left: 35px;
+	margin-right: 15px;
+	margin-top: -7px;
+}
+
+#you{
+	position: absolute;
+	z-index:99;
+  width: 95px;
+  margin-top: -32px;
+  border-radius: 5px;
+  background: #6C3C67;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,.2);
+  padding: 5px;
+  margin-right: 2%;
+  right: 155px;
+}
+
+#you img{
+	position: absolute;
+  width: 13px;	
+  margin-top: 0px;
+  margin-left: -55px;
+}
+
+#you a{
+	position: absolute;
+	margin-left: -30px;
+	font-size: 14px;
+}
+
+#you ul{
+  display: none;	
+}
+
+#you:hover ul{
+	float: right;
+  display: block;
+  margin-top: -25px;
+  padding: 10px;
+}
+
+#you:hover ul li{
+  display: block;
+  text-align: right;
+}
+
+#you:hover ul li a{
+  padding-bottom: 20px;
+  line-height: 30px;
+}
+
+.teacher-nav a {
+  margin-top: -50px;
+}
+
+	/*	================================================================
+			Landing Page
+			================================================================ */
+			
+.centered{
+	position: fixed;	
+	top: 60%;
+	left: 50%;
+	margin-left: -235px;
+}
+
+.landing li a{
+	text-decoration: none;
+	font-size: 20px;
+	margin-top: 15px;
+	padding: 3px 3px;	
+	
+}
+
+.text-centered{
+	position: absolute;
+	width:750px;
+	margin-left: -325px;
+	top: 20%;
+	left: 50%;
+}
+
+.text-centered p{
+  font-size: 20px;	
+  margin-bottom: -2.5px;
+}
+
+.text-centered li{
+  font-size: 20px;	
+  padding-bottom: 8px;
+}
+
+.text-centered ul{
+  padding-left: 30px;
+}
+
+.text-centered img{
+	padding-top: 25px;	
+}
+
+.text-centered h3{
+	margin-bottom: -20px;
+	text-decoration: none;
+	font-weight: normal;
+	font-size: 25px
+}
+
+	/*	================================================================
+			Signup Page
+			================================================================ */
+			
+#signup-center{
+	position: absolute;
+	left: 50%;
+	margin-left: -185px;	
+	top: 10%;
+}
+
+#signup{
+	position: absolute;
+	left: 50%;
+	margin-left: -275px;
+	top: 50%;
+	margin-top: -250px;
+	width: 550px;
+	height: 550px;	
+	background-color: white;
+	border-radius: 5px;
+	box-shadow: 0 1px 3px rgba(0,0,0,.1);
+}
+
+
+#signup input[type="text"], #signup input[type="password"]{
+	width: 360px;
+	height: 50px;
+	margin-top: 10px;
+	border-radius: 5px;
+	background-color: white;
+	border: 1px solid #dddddd;
+}
+
+#signup input[type="submit"]{
+	width: 150px;
+	height: 45px;		
+	background-color: #470b41;
+	color: white;
+	border: 0px;
+	border-radius: 10px;
+}
+
+#signup input[type="radio"]{
+	width: 40px;
+	height: 20px;
+	background-color: #470b41;
+	color: white;
+	border-radius: 10px;
+}
+
+#signup label{
+  font-size: 20px;	
+  line-height: 30px;
+}
+
+#signup input:valid, #signup input:focus:valid{
+	border-color: #CE91D9;
+}
+
+#signup input:invalid, #signup input:focus:invalid{
+	border-color: #FF639C;
+	background-color: #FFF2F7;
+}
+
+	/*	================================================================
+			Login Page
+			================================================================ */
+			
+#login-center{
+	position: absolute;
+	left: 50%;
+	margin-left: -135px;	
+	top: 12.5%;
+	
+}
+
+#login{
+	position: absolute;
+	left: 50%;
+	margin-left: -250px;
+	top: 40%;
+	width: 500px;
+	height: 275px;	
+	background-color: white;
+	border-radius: 5px;
+	box-shadow: 0 1px 3px rgba(0,0,0,.1);
+}
+
+#login input[type="text"], #login input[type="password"]{
+	width: 250px;
+	height: 50px;
+	margin-top: 10px;
+	border-radius: 5px;
+	background-color: white;
+	border: 1px solid #dddddd;
+}
+
+#login input[type="submit"]{
+	width: 150px;
+	height: 45px;		
+	background-color: #470b41;
+	color: white;
+	border: 0px;
+	border-radius: 10px;
+}
+
+#login input:valid, #login input:focus:valid{
+	border-color: #CE91D9;
+}
+
+#login input:invalid, #login input:focus:invalid{
+	border-color: #FF639C;
+	background-color: #FFF2F7;
+}
+
+	/*	================================================================
+			Class Toggle
+			================================================================ */
+
+.checkbox-toggle {
+  display: none;
+}
+
+.checkbox-toggle + label {
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+input.gray + label:before {
+  padding: 6px;
+  border-radius: 10px;
+  content: attr(data-on);
+  background: #CDCDCD;
+  
+}
+input.gray:checked + label:before {
+  padding: 6px;
+  border-radius: 10px;
+  color: #F2EDF7;
+  background-color: #525252;
+}
+
+		/*	================================================================
+			Avatar
+			================================================================ */
+			
+.avatar{
+	position: absolute;
+	left: 50%;
+	top: 22.5%;
+	margin-left: -100px;
+	background-color: #FAAFE2;
+	width: 175px;
+	height: 250px;
+	border-radius: 100px;
+	box-shadow: 0 1px 3px rgba(0,0,0,.2);
+	z-index:0;
+}
+
+.ear-left{
+	position: absolute;
+  left: 50%;
+	top: 20%;
+	margin-top: 10px;
+	margin-left: -95px;
+	width:50px;
+	height:55px;
+	border-radius: 50px;
+	background-color: #F0AFE2;
+	z-index:0;
+}
+
+.ear-right{
+	position: absolute;
+  left: 50%;
+	top: 20%;
+	margin-top: 10px;
+	margin-left: 20px;
+	width:50px;
+	height:55px;
+	border-radius: 50px;
+	background-color: #F0AFE2;
+	z-index:0;
+}
+
+.eyes{
+	margin-left: 30px;	
+	margin-top: 37px;
+}
+
+.eye-left{
+	float: left;
+	width:50px;
+	height:50px;
+	border-radius: 50px;
+	background-color: #FFFFFF;
+}
+
+.eye-right{
+	float: left;
+	margin-left: 10px;
+	width:50px;
+	height:50px;
+	border-radius: 50px;
+	background-color: #FFFFFF;
+	
+}
+
+.pupil{
+	margin-left: 27px;
+	margin-top: 30px;
+  width:13px;
+	height:13px;
+	border-radius: 50%;
+	background-color: black;
+}
+
+.sparkle-left{
+	float:left;
+	margin-left: 8px;
+	margin-top: 0px;
+  width:7px;
+	height:7px;
+	border-radius: 50%;
+	background-color: white;
+}
+
+
+.sparkle-right{
+	float:left;
+	margin-left: 35px;
+	margin-top: -12.5px;
+  width:7px;
+	height:7px;
+	border-radius: 50%;
+	background-color: white;
+}
+
+.nose{
+	position: absolute;
+	margin-left: 12.5px;
+}
+
+.nostril{
+	float: left;
+	margin-left: 20px;
+	margin-top: 70px;
+	width:15px;
+	height:15px;
+	border-radius: 50px;
+	background-color: rgba(255,255,255,.3);
+	box-shadow: inset 0 1px 3px rgba(0,0,0,.2);
+}
+
+.arms{
+	position: absolute;
+  left: 50%;
+	top: 30%;
+	margin-top: 50px;
+	margin-left: -210px;
+	z-index:2;
+}
+
+.arm{
+	box-shadow: 0 1px 3px rgba(0,0,0,.2);
+	float: left;
+	margin-left: 65px;
+	margin-right: 65px;
+	width:70px;
+	height:55px;
+	border-radius: 50%;
+	background-color: #F0AFE2;
+}
+
+.arm .toes{
+	float:left;
+	margin-left: 12px;
+	margin-top: 40px;
+  width:17px;
+	height:25px;
+	border-radius: 50%;
+	background-color: rgba(255,255,255,.3);
+	overflow: hidden;
+}
+
+.arm .toes-right{
+	float:left;
+	margin-left: 12px;
+	margin-top: 40px;
+  width:17px;
+	height:25px;
+	border-radius: 50%;
+	background-color: rgba(255,255,255,.3);
+	overflow: hidden;
+}
+
+	/*	================================================================
+			View Post Page
+			================================================================ */
+#post-center
+{
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  margin-left: -300px;	
+  background-color: white;
+  border-radius: 5px;
+  padding: 25px;
+  margin-bottom: 60px;
+}
+
+#post-center h1
+{
+	margin-top: -15px;
+  margin-bottom: -10px;
+}
+
+#post-center input[type="submit"]{
+  border-radius: 10px;	
+  background-color: #6C3C67;
+  color: white;
+  border: 0px;
+  float: right;
+}
+
+#comment
+{
+	border-top: solid 1px #DEDEDE;
+}
+
+#comment-prof, #comment-TA
+{
+	background: rgba(71,11,65,.3);
+	border-top: solid 1px #DEDEDE;
+}
+
+.special{
+  float: right;	
+  color: white;
+  background: rgba(71,11,65, .5);
+  padding: 5px;
+  border-radius: 5px;
+  
+}
+
+#comment-box
+{
+	margin-top: 20px;
+  border: solid 1px #EAEAEA;
+  border-radius: 3px;
+}
+
+#comment p
+{
+  line-height: 10px;	
+}
+
+.timestamp
+{
+  color: #DEDEDE;	
+}
+
+	/*	================================================================
+			Profile
+			================================================================ */
+#profile-top
+{
+	float: left;
+	margin-top: 50px;
+	margin-left: 5%;
+	border-bottom: solid 1px #dddddd;
+	width: 90%;
+}			
+			
+#default-pic{
+  float: left;	
+  margin-left: 27px;
+  margin-top: 15px;
+
+}			
+
+#pic-background
+{
+	float: left;
+	width: 100px;
+  height: 100px;
+  margin-right: 20px;
+  background: #dddddd;
+}
+			
+#profile
+{
+	float: left;
+	margin-top: -12px;
+}  
+
+
+#status
+{
+  margin-bottom: 50px;	
+}
+
+
+#profile-name
+{
+	font-size: 28px;
+	line-height: 0px;
+	margin-left: -3px;
+	font-weight: 400;
+}
+
+	/*	================================================================
+			Post Page
+			================================================================ */
+			
+#poststyle{
+	position: absolute;
+	left: 50%;
+	margin-left: -275px;
+	top: 50%;
+	margin-top: -200px;
+	width: 550px;
+	height: 410px;	
+	background-color: white;
+	border-radius: 5px;
+	box-shadow: 0 1px 3px rgba(0,0,0,.1);
+}
+
+#poststyle-center{
+	position: absolute;
+	left: 50%;
+	margin-left: -185px;	
+	top: 10%;
+}
+
+#poststyle input[type="text"]{
+	width: 360px;
+	height: 25px;
+	margin-top: 10px;
+	border-radius: 5px;
+	background-color: white;
+	border: 1px solid #dddddd;
+}
+
+#poststyle textarea{
+	border-radius: 5px;
+	background-color: white;
+	border: 1px solid #dddddd;
+}
+
+#poststyle input[type='submit']
+{
+	margin-top: 20px;
+	float: right;
+ 	width: 100px;
+	height: 45px;		
+	background-color: #470b41;
+	color: white;
+	border: 0px;
+	border-radius: 10px;	
+}
+
+	/*	================================================================
+			Add Class Page
+			================================================================ */
+
+#class{
+	position: absolute;
+	left: 50%;
+	margin-left: -275px;
+	top: 50%;
+	margin-top: -200px;
+	width: 550px;
+	height: 310px;	
+	background-color: white;
+	border-radius: 5px;
+	box-shadow: 0 1px 3px rgba(0,0,0,.1);
+}
+
+#class-center{
+	position: absolute;
+	left: 50%;
+	margin-left: -185px;	
+	top: 10%;
+}
+
+#class input[type="text"]{
+	width: 360px;
+	height: 25px;
+	margin-top: 10px;
+	border-radius: 5px;
+	background-color: white;
+	border: 1px solid #dddddd;
+}
+
+#class textarea{
+	border-radius: 5px;
+	background-color: white;
+	border: 1px solid #dddddd;
+}
+
+#class input[type='submit']
+{
+	margin-top: 20px;
+	float: right;
+ 	width: 100px;
+	height: 45px;		
+	background-color: #470b41;
+	color: white;
+	border: 0px;
+	border-radius: 10px;	
+}
+
+#existing-class-center{
+	position: absolute;
+	top: 50%;
+	margin-top: 150px;
+  left: 50%;
+	margin-left: -350px;
+	z-index: -1px;
+}
+
+#existing-class{
+	padding: 40px;
+	padding-left: 40px;
+	padding-top: 10px;
+	float: left;
+	margin: 10px;
+	background-color: white;
+	border-radius: 5px;
+	box-shadow: 0 1px 3px rgba(0,0,0,.1);
+	text-align: center;
+}
+
+.addclasslist{
+	width: 150px;
+	float: left;
+}
+
+.addclasslist input[type='submit']{
+  padding: 10px;
+  margin-top: 10px;
+	background-color: #470b41;
+	color: white;
+	border: 0px;
+	border-radius: 10px;	
+}
+
+	/*	================================================================
+			Add Student Page
+			================================================================ */
+
+#student{
+	position: absolute;
+	left: 50%;
+	margin-left: -275px;
+	top: 50%;
+	margin-top: -200px;
+	width: 550px;
+	height: 310px;	
+	background-color: white;
+	border-radius: 5px;
+	box-shadow: 0 1px 3px rgba(0,0,0,.1);
+}
+
+#student-center{
+	position: absolute;
+	left: 50%;
+	margin-left: -185px;	
+	top: 10%;
+}
+
+#student input[type="text"]{
+	width: 360px;
+	height: 25px;
+	margin-top: 10px;
+	border-radius: 5px;
+	background-color: white;
+	border: 1px solid #dddddd;
+}
+
+#student textarea{
+	border-radius: 5px;
+	background-color: white;
+	border: 1px solid #dddddd;
+}
+
+#student input[type='submit']
+{
+	margin-top: 20px;
+	float: right;
+ 	width: 100px;
+	height: 45px;		
+	background-color: #470b41;
+	color: white;
+	border: 0px;
+	border-radius: 10px;	
+}
+
+#existing-student-center{
+	position: absolute;
+	top: 50%;
+	margin-top: 150px;
+  left: 50%;
+	margin-left: -350px;
+	z-index: -1px;
+}
+
+#student-list{
+	padding: 40px;
+	padding-left: 40px;
+	padding-top: 10px;
+	float: left;
+	margin: 10px;
+	background-color: white;
+	border-radius: 5px;
+	box-shadow: 0 1px 3px rgba(0,0,0,.1);
+	text-align: center;
+}
+
+.addstudentlist{
+	width: 150px;
+	float: left;
+}
